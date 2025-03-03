@@ -1,50 +1,62 @@
 # 🚀 Pay Flow - Subscription Management System API
 
-## 🔥 Description
+### 📖 Learnings & Documentation
 
-The **Pay Flow - Subscription Management System API** is a scalable, production-ready backend solution designed to manage real users, subscriptions, and transactions securely. With robust authentication, automated workflows, and seamless integration capabilities, it ensures efficient and secure subscription management for businesses of all sizes.
+While building this project for FOSS Hack 2025, we gained valuable insights into backend development, hackathon best practices, and efficient project structuring. To document and share these learnings, we have compiled a detailed guide.
 
----
+📌 **Check out the full documentation here**: [Backend Doc's](./Backend%20Doc's)
+
+This resource covers almost every aspect of backend development.
 
 ## 📜 Table of Contents
 
-- [Project Description](#project-description)
-- [The Problem We Are Solving](#the-problem-we-are-solving)
-- [What Our Project Is](#what-our-project-is)
-- [How It Works](#how-it-works)
-- [Project Timeline](#project-timeline)
-  - [Initial Stage](#initial-stage)
-  - [Current Stage](#current-stage)
-  - [Future Stage](#future-stage)
-- [Progress and Experience](#progress-and-experience)
-  - [Process 💭](#process)
-  - [Learnings 📚](#learnings)
-- [Improvement ✨](#improvement)
-- [Tech Stack](#tech-stack)
-- [Features](#features)
-- [Quick Start](#quick-start)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Contributing](#contributing)
-  - [Guidelines for Contributing](#guidelines-for-contributing)
-  - [Reviewing and Merging Pull Requests](#reviewing-and-merging-pull-requests)
-- [Conclusion](#conclusion)
+1. [Project Description](#-project-description)
+
+   - [The Problem We Are Solving](#the-problem-we-are-solving)
+   - [What Our Project Is](#what-our-project-is)
+   - [How It Works](#how-it-works)
+   - [Project Timeline](#project-timeline)
+     - [Initial Stage](#initial-stage)
+     - [Current Stage](#current-stage)
+     - [Future Stage](#future-stage)
+   - [Progress and Experience](#progress-and-experience)
+     - [Process](#process)
+     - [Learnings](#learnings)
+     - [Improvement](#improvement)
+
+2. [Hackathon Participation](#hackathon-participation)
+
+   - [Event Details](#event-details)
+   - [Hackathon Rules](#hackathon-rules)
+
+3. [Introduction](#introduction)
+4. [Links](#links)
+5. [Team Members](#team-members)
+6. [Tech Stack](#tech-stack)
+7. [Features](#features)
+8. [Quick Start](#quick-start)
+   - [Prerequisites](#prerequisites)
+   - [Installation](#installation)
+9. [Contributing](#contributing)
+   - [Guidelines for Contributing](#guidelines-for-contributing)
+   - [Reviewing and Merging Pull Requests](#reviewing-and-merging-pull-requests)
+10. [Conclusion](#conclusion)
 
 ---
 
 ## 📌 Project Description
 
-This API powers subscription-based platforms, offering authentication, user management, and automated billing workflows. It enhances security with **JWT authentication**, prevents abuse with **rate limiting**, and automates reminders using **Upstash Redis**.
+The **Pay Flow - Subscription Management System API** is a scalable, production-ready backend solution designed to manage real users, subscriptions, and transactions securely. With robust authentication, automated workflows, and seamless integration capabilities, it ensures efficient and secure subscription management for businesses of all sizes.
 
-## ❗ The Problem We Are Solving
+### ❗ The Problem We Are Solving
 
 Managing subscriptions manually is inefficient and error-prone. Businesses need an automated, scalable, and secure solution to handle user sign-ups, payments, renewals, and cancellations while preventing fraud.
 
-## 🔍 What Our Project Is
+### 🔍 What Our Project Is
 
 A **Node.js & Express.js**-based API with **MongoDB** for data persistence, ensuring **real-time subscription tracking, email notifications, and robust access control** for businesses handling recurring payments.
 
-## ⚙️ How It Works
+### ⚙️ How It Works
 
 1. **User Authentication:** Secure sign-up, login, and JWT-based authorization.
 2. **Subscription Plans:** Define and manage multiple pricing tiers.
@@ -81,8 +93,6 @@ A **Node.js & Express.js**-based API with **MongoDB** for data persistence, ensu
 - **Implementation:** Built secure authentication, user CRUD, and subscription plans.
 - **Testing & Optimization:** Added middleware for global error handling and logging.
 
-- **FOSS Hack 2025** Our experience at the FOSS Hack 2025 provided valuable insights and motivation to enhance our project further.
-
 ### 📚 Learnings
 
 Through this project, we learned:
@@ -91,15 +101,48 @@ Through this project, we learned:
 - Efficient database design using **MongoDB & Mongoose**.
 - Deploying scalable **Node.js applications** on **VPS hosting**.
 
----
-
-## 🚀 Improvement ✨
+### 🚀 Improvement
 
 While we've made significant progress, there's always room for improvement:
 
 - **Enhanced Payment Support:** Implementing **Stripe for seamless transactions**.
 - **GraphQL API:** Providing **flexible data querying options**.
 - **Comprehensive Testing:** Adding **unit & integration tests** for higher stability.
+
+---
+
+## 🎯 Hackathon Participation
+
+### 📅 Event Details
+
+We participated in **FOSS Hack 2025**, India's largest open-source hackathon, held from **February 22-23, 2025**. The event focused on building or extending free and open-source software projects, offering a prize pool of **₹5,00,000**.
+
+However, due to our internship commitments, we couldn't focus on the project as much as we wanted. We will continue developing it and provide updates as soon as possible.
+
+### 📜 Hackathon Rules
+
+- Projects must be open-source and licensed under a valid FOSS license.
+- No external APIs should serve as the core feature.
+- Evaluation is based on code commits during the event.
+- No blockchain, web3, or crypto projects are allowed.
+- Cash prizes are awarded at the jury's discretion.
+
+More details can be found on the **[FOSS Hack homepage](https://fossunited.org/fosshack/2025)**.
+
+---
+
+## 📌 Introduction
+
+This project aims to provide a robust and scalable subscription management API for businesses handling recurring payments. Built with security, automation, and efficiency in mind, Pay Flow ensures seamless subscription handling.
+
+## 🔗 Links
+
+- **[Project Submission on Foss Hack 2025](https://fossunited.org/hack/fosshack25/p/21ks4ol456)**
+- **[LinkedIn Post](#)** (Coming Soon)
+
+## 👥 Team Members
+
+As of now, the project is being developed by **[Guna Palanivel](https://www.linkedin.com/in/guna-palanivel/)**. I came to Bangalore from Chennai for an internship and couldn't concentrate much on this project due to work commitments. However, I will continue building it and provide updates soon.
 
 ---
 
@@ -115,89 +158,68 @@ While we've made significant progress, there's always room for improvement:
 
 ---
 
-## ✨ Features
+## 🤝 Contributing
 
-### 🛡 Security & Authentication
+We welcome contributions from the community to make this project even better! To get started, please follow these steps:
 
-✔ **JWT Authentication** – Secure login & authorization.  
-✔ **Rate Limiting & Bot Protection** – Arcjet integration to prevent abuse.
+### 🛠 Fork the Repository
 
-### 📊 Subscription Management
+Click the "Fork" button at the top right corner of this page to create a copy of the repository in your GitHub account.
 
-✔ **User CRUD Operations** – Create, update, and manage users.  
-✔ **Subscription Plans** – Different pricing tiers for flexibility.  
-✔ **Automated Workflows** – Upstash-powered email reminders.
+### 🖥 Clone Your Fork
 
-### 🏗 API Architecture
+```bash
+git clone https://github.com/GunaPalanivel/PayFlow.git
+```
 
-✔ **Modular & Scalable** – Well-structured routes & controllers.  
-✔ **Global Error Handling** – Middleware-based error management.  
-✔ **Logging Mechanisms** – Debugging & monitoring for stability.
+```bash
+cd PayFlow
+```
 
----
+### 🌱 Create a New Branch
 
-## ⚡ Quick Start
+```bash
+git checkout -b feature-branch
+```
 
-Follow these steps to set up the project locally on your machine.
+### ✍️ Make Your Changes
 
-### 🔗 Prerequisites
+Implement your changes or additions in the new branch.
 
-Make sure you have the following installed:
+### 📌 Commit Your Changes
 
-- **Git**
-- **Node.js**
-- **npm** (Node Package Manager)
+```bash
+git commit -m "Add [feature/bug description]"
+```
 
-### 🛠 Installation
+### 🚀 Push to Your Branch
 
-1. **Clone the Repository**
-   ```bash
-   https://github.com/GunaPalanivel/PayFlow.git
-   ```
-   ```bash
-   cd PayFlow
-   ```
-2. **Install Dependencies**
-   ```bash
-   npm install
-   ```
-3. **Set Up Environment Variables**  
-   Create a `.env` file in the project root and add:
-   ```ini
-   PORT=5500
-   SERVER_URL="http://localhost:5500"
-   NODE_ENV=development
-   DB_URI=your_mongodb_connection_string
-   JWT_SECRET=your_secret_key
-   JWT_EXPIRES_IN="1d"
-   ARCJET_KEY=your_arcjet_key
-   ARCJET_ENV="development"
-   QSTASH_URL=http://127.0.0.1:8080
-   QSTASH_TOKEN=your_upstash_token
-   EMAIL_PASSWORD=your_email_password
-   ```
-4. **Run the Project**
-   ```bash
-   npm run dev
-   ```
-   Open `http://localhost:5500` in your browser or test via Postman.
+```bash
+git push origin feature-branch
+```
+
+### 🔀 Open a Pull Request
+
+Navigate to the original repository and open a pull request (PR) from your forked repository.
 
 ---
 
-## 🌟 Contributing
+### Guidelines for Contributing
 
-### 🔄 Guidelines for Contributing
+- **Write Clear Commit Messages**: Use clear and concise commit messages that accurately describe the changes made.
+- **Code Style**: Ensure your code follows the project's style guidelines and best practices.
+- **Documentation**: Update the documentation if your changes include new features or significant modifications.
+- **Tests**: If applicable, write tests for your changes to ensure functionality is maintained and new features work as expected.
 
-- Fork the repository and create a new branch for your feature.
-- Follow coding best practices and write clean, maintainable code.
-- Ensure all new code is tested before submitting.
+### Reviewing and Merging Pull Requests
 
-### ✅ Reviewing and Merging Pull Requests
+All contributions will be reviewed by the project maintainers. Feedback and suggestions for improvements may be provided during the review process. Once your pull request has been reviewed and approved, it will be merged into the main branch.
 
-- All PRs require **at least one code review**.
-- Include **detailed commit messages** for better tracking.
+We appreciate your contributions and thank you for helping improve this project!
 
----
+If you have any questions or need further assistance, feel free to reach out to us by opening an issue in the repository.
+
+Let's continue pushing boundaries and crafting exceptional web experiences together! 💻✨
 
 ## 🎯 Conclusion
 
