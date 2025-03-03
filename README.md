@@ -10,7 +10,7 @@ This resource covers almost every aspect of backend development.
 
 ## 📜 Table of Contents
 
-1. [Project Description](#project-description)
+1. [Project Description](#-project-description)
 
    - [The Problem We Are Solving](#the-problem-we-are-solving)
    - [What Our Project Is](#what-our-project-is)
@@ -170,6 +170,9 @@ Click the "Fork" button at the top right corner of this page to create a copy of
 
 ```bash
 git clone https://github.com/GunaPalanivel/PayFlow.git
+```
+
+```bash
 cd PayFlow
 ```
 

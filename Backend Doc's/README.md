@@ -10,13 +10,13 @@ This guide covers backend development fundamentals, from understanding server co
 
 ## Table of Contents
 
-1. [What is Backend Development?](#what-is-backend-development)
-2. [Internet Protocols & Networking](#internet-protocols--networking)
-3. [APIs and Communication](#apis-and-communication)
-4. [Backend Languages and Frameworks](#backend-languages-and-frameworks)
-5. [Databases and Storage](#databases-and-storage)
-6. [Backend Architectures](#backend-architectures)
-7. [Setup and Development](#setup-and-development)
+1. [What is Backend Development?](#1-what-is-backend-development)
+2. [Internet Protocols & Networking](#2-internet-protocols--networking)
+3. [APIs and Communication](#3-apis-and-communication)
+4. [Backend Languages and Frameworks](#4-backend-languages-and-frameworks)
+5. [Databases and Storage](#5-databases-and-storage)
+6. [Backend Architectures](#6-backend-architectures)
+7. [Setup and Development](#7-setup-and-development)
 
 ---
 
