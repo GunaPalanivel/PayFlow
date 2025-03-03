@@ -25,7 +25,7 @@ APIs manage resources using CRUD operations:
 
 ### 2.1 RESTful APIs
 
-REST (Representational State Transfer) is the most widely used API style. It relies on HTTP methods and stateless architecture, meaning each request is independent.
+REST (Representational State Transfer) is the most widely used API style. It relies on HTTP methods are often called "HTTP verbs" and stateless architecture, meaning each request is independent.
 
 ### 2.2 GraphQL
 
