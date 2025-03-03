@@ -1,6 +1,6 @@
 # 🚀 Pay Flow - Subscription Management System API
 
-## 🔥 High-Impact Description
+## 🔥 Description
 
 The **Pay Flow - Subscription Management System API** is a scalable, production-ready backend solution designed to manage real users, subscriptions, and transactions securely. With robust authentication, automated workflows, and seamless integration capabilities, it ensures efficient and secure subscription management for businesses of all sizes.
 
