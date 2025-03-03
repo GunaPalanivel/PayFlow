@@ -1,5 +1,13 @@
 # 🚀 Pay Flow - Subscription Management System API
 
+### 📖 Learnings & Documentation
+
+While building this project for FOSS Hack 2025, we gained valuable insights into backend development, hackathon best practices, and efficient project structuring. To document and share these learnings, we have compiled a detailed guide.
+
+📌 **Check out the full documentation here**: [Backend Doc's](./Backend%20Doc's)
+
+This resource covers almost every aspect of backend development.
+
 ## 📜 Table of Contents
 
 1. [Project Description](#project-description)
@@ -129,6 +137,7 @@ This project aims to provide a robust and scalable subscription management API f
 
 ## 🔗 Links
 
+- **[Project Submission on Foss Hack 2025](https://fossunited.org/hack/fosshack25/p/21ks4ol456)**
 - **[LinkedIn Post](#)** (Coming Soon)
 
 ## 👥 Team Members
