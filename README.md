@@ -138,7 +138,7 @@ This project aims to provide a robust and scalable subscription management API f
 ## 🔗 Links
 
 - **[Project Submission on Foss Hack 2025](https://fossunited.org/hack/fosshack25/p/21ks4ol456)**
-- **[LinkedIn Post](#)** (Coming Soon)
+- **[LinkedIn Post](https://www.linkedin.com/posts/guna-palanivel_%F0%9D%97%A3%F0%9D%97%AE%F0%9D%98%86-%F0%9D%97%99%F0%9D%97%B9%F0%9D%97%BC%F0%9D%98%84-%F0%9D%97%A0%F0%9D%98%86-%F0%9D%97%9D%F0%9D%97%BC%F0%9D%98%82%F0%9D%97%BF%F0%9D%97%BB%F0%9D%97%B2%F0%9D%98%86-activity-7303383872333877248-WuTT?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD1iPIIBQeYlEGyQlhSmzyVizNLkjpHgngw)**
 
 ## 👥 Team Members
 
