@@ -1,226 +1,213 @@
-# 🚀 Pay Flow - Subscription Management System API
+# 🚀 Pay Flow – Subscription Management System API
 
-### 📖 Learnings & Documentation
+A full-stack-ready backend built to handle real-world subscription workflows. Built during **FOSS Hack 2025**, this API is focused on solving a problem that every SaaS team faces: managing recurring payments in a secure, scalable, and maintainable way.
 
-While building this project for FOSS Hack 2025, we gained valuable insights into backend development, hackathon best practices, and efficient project structuring. To document and share these learnings, we have compiled a detailed guide.
-
-📌 **Check out the full documentation here**: [Backend Doc's](./Backend%20Doc's)
-
-This resource covers almost every aspect of backend development.
-
-## 📜 Table of Contents
-
-1. [Project Description](#-project-description)
-
-   - [The Problem We Are Solving](#the-problem-we-are-solving)
-   - [What Our Project Is](#what-our-project-is)
-   - [How It Works](#how-it-works)
-   - [Project Timeline](#project-timeline)
-     - [Initial Stage](#initial-stage)
-     - [Current Stage](#current-stage)
-     - [Future Stage](#future-stage)
-   - [Progress and Experience](#progress-and-experience)
-     - [Process](#process)
-     - [Learnings](#learnings)
-     - [Improvement](#improvement)
-
-2. [Hackathon Participation](#hackathon-participation)
-
-   - [Event Details](#event-details)
-   - [Hackathon Rules](#hackathon-rules)
-
-3. [Introduction](#introduction)
-4. [Links](#links)
-5. [Team Members](#team-members)
-6. [Tech Stack](#tech-stack)
-7. [Features](#features)
-8. [Quick Start](#quick-start)
-   - [Prerequisites](#prerequisites)
-   - [Installation](#installation)
-9. [Contributing](#contributing)
-   - [Guidelines for Contributing](#guidelines-for-contributing)
-   - [Reviewing and Merging Pull Requests](#reviewing-and-merging-pull-requests)
-10. [Conclusion](#conclusion)
+> 🔗 [📘 Backend Docs](./Backend%20Doc's) — Detailed breakdowns, design decisions, and implementation notes.
 
 ---
 
-## 📌 Project Description
+## 📌 TL;DR
 
-The **Pay Flow - Subscription Management System API** is a scalable, production-ready backend solution designed to manage real users, subscriptions, and transactions securely. With robust authentication, automated workflows, and seamless integration capabilities, it ensures efficient and secure subscription management for businesses of all sizes.
-
-### ❗ The Problem We Are Solving
-
-Managing subscriptions manually is inefficient and error-prone. Businesses need an automated, scalable, and secure solution to handle user sign-ups, payments, renewals, and cancellations while preventing fraud.
-
-### 🔍 What Our Project Is
-
-A **Node.js & Express.js**-based API with **MongoDB** for data persistence, ensuring **real-time subscription tracking, email notifications, and robust access control** for businesses handling recurring payments.
-
-### ⚙️ How It Works
-
-1. **User Authentication:** Secure sign-up, login, and JWT-based authorization.
-2. **Subscription Plans:** Define and manage multiple pricing tiers.
-3. **Automated Workflows:** Scheduled reminders, payment retries, and expiration alerts.
-4. **Security Features:** Rate limiting, bot protection, and API access controls.
+If you're building a product with recurring billing, Pay Flow gives you:
+- **Secure auth (JWT + RBAC)**
+- **Custom subscription tiers**
+- **Automated workflows (emails, retries, reminders)**
+- **Built-in fraud protection**
+- **Future-ready Stripe and GraphQL support**
 
 ---
 
-## 📅 Project Timeline
+## 📦 Tech Stack
 
-### ✅ Initial Stage
-
-- Designed the database schema and authentication flow.
-- Integrated JWT authentication and role-based access control.
-
-### 🚧 Current Stage
-
-- Implementing **automated email reminders and workflow triggers** using Upstash.
-- Enhancing security with **Arcjet for bot protection**.
-
-### 🔮 Future Stage
-
-- Integrating **Stripe for seamless payments**.
-- Expanding to support **GraphQL** for more flexible API queries.
-- Adding **unit and integration testing** for higher reliability.
+| Layer        | Tooling                  | Why?                                                                 |
+|--------------|--------------------------|----------------------------------------------------------------------|
+| Language     | Node.js (ES2022+)        | Async-first, fast, and community-rich.                              |
+| Framework    | Express.js               | Lightweight, middleware-centric routing.                            |
+| Database     | MongoDB + Mongoose       | Schema flexibility + fast prototyping.                              |
+| Auth         | JWT                      | Stateless auth with role-based access.                              |
+| Security     | Arcjet                   | Rate-limiting, anti-bot, basic WAF.                                 |
+| Workflows    | Upstash (Redis)          | Email reminders, retry jobs, and expiry alerts.                     |
+| Emails       | Nodemailer               | Simple SMTP-based transactional mail.                               |
 
 ---
 
-## 🏆 Progress and Experience
+## 📖 Why We Built This
 
-### 💭 Process
+### ❓ Problem
 
-- **Research & Planning:** Analyzed common subscription models.
-- **Implementation:** Built secure authentication, user CRUD, and subscription plans.
-- **Testing & Optimization:** Added middleware for global error handling and logging.
+Managing subscriptions is deceptively complex. Payments can fail. Customers forget to renew. Fraud happens. Most startups duct-tape solutions together using spreadsheets and manual follow-ups. That doesn't scale.
 
-### 📚 Learnings
+### ✅ Our Solution
 
-Through this project, we learned:
+We built a **modular backend API** that abstracts away the hard parts of subscription management:
 
-- API security best practices (**JWT, rate limiting, bot protection**).
-- Efficient database design using **MongoDB & Mongoose**.
-- Deploying scalable **Node.js applications** on **VPS hosting**.
-
-### 🚀 Improvement
-
-While we've made significant progress, there's always room for improvement:
-
-- **Enhanced Payment Support:** Implementing **Stripe for seamless transactions**.
-- **GraphQL API:** Providing **flexible data querying options**.
-- **Comprehensive Testing:** Adding **unit & integration tests** for higher stability.
+- 🔐 Auth: JWT-based with RBAC support (admin, user).
+- 💳 Plans: CRUD APIs for plans (free, standard, premium).
+- 🔁 Renewals: Automate recurring reminders & retries.
+- 📬 Notifications: Email users before/after critical events.
+- 🚫 Security: Arcjet blocks malicious traffic out-of-the-box.
 
 ---
 
-## 🎯 Hackathon Participation
+## ⚙️ How It Works
 
-### 📅 Event Details
+### Auth Flow (User + Admin)
+- Sign-up/Login routes issue JWTs.
+- Middleware checks roles before protected actions.
+- Passwords hashed with bcrypt, tokens signed with env-based secrets.
 
-We participated in **FOSS Hack 2025**, India's largest open-source hackathon, held from **February 22-23, 2025**. The event focused on building or extending free and open-source software projects, offering a prize pool of **₹5,00,000**.
+### Subscription Engine
+- Plans stored in MongoDB.
+- Each user links to a `subscription` document with `status`, `expiry`, and `planId`.
 
-However, due to our internship commitments, we couldn't focus on the project as much as we wanted. We will continue developing it and provide updates as soon as possible.
+### Automation with Redis (Upstash)
+- Redis TTL keys for auto-expiry.
+- Worker runs every minute to check for:
+  - Renewals
+  - Reminders
+  - Failed payment retries
 
-### 📜 Hackathon Rules
+### Emails via Nodemailer
+- Transactional emails sent on:
+  - Signup
+  - Upcoming expiry
+  - Payment success/failure
 
-- Projects must be open-source and licensed under a valid FOSS license.
-- No external APIs should serve as the core feature.
-- Evaluation is based on code commits during the event.
-- No blockchain, web3, or crypto projects are allowed.
-- Cash prizes are awarded at the jury's discretion.
-
-More details can be found on the **[FOSS Hack homepage](https://fossunited.org/fosshack/2025)**.
-
----
-
-## 📌 Introduction
-
-This project aims to provide a robust and scalable subscription management API for businesses handling recurring payments. Built with security, automation, and efficiency in mind, Pay Flow ensures seamless subscription handling.
-
-## 🔗 Links
-
-- **[Project Submission on Foss Hack 2025](https://fossunited.org/hack/fosshack25/p/21ks4ol456)**
-- **[LinkedIn Post](https://www.linkedin.com/posts/guna-palanivel_%F0%9D%97%A3%F0%9D%97%AE%F0%9D%98%86-%F0%9D%97%99%F0%9D%97%B9%F0%9D%97%BC%F0%9D%98%84-%F0%9D%97%A0%F0%9D%98%86-%F0%9D%97%9D%F0%9D%97%BC%F0%9D%98%82%F0%9D%97%BF%F0%9D%97%BB%F0%9D%97%B2%F0%9D%98%86-activity-7303383872333877248-WuTT?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD1iPIIBQeYlEGyQlhSmzyVizNLkjpHgngw)**
-
-## 👥 Team Members
-
-As of now, the project is being developed by **[Guna Palanivel](https://www.linkedin.com/in/guna-palanivel/)**. I came to Bangalore from Chennai for an internship and couldn't concentrate much on this project due to work commitments. However, I will continue building it and provide updates soon.
+### Security Layer
+- Arcjet blocks:
+  - Excessive request spam
+  - Common attack vectors (bots, brute-force)
 
 ---
 
-## 🛠 Tech Stack
+## 🗓 Project Timeline
 
-- **Node.js** – Backend runtime.
-- **Express.js** – API framework.
-- **MongoDB & Mongoose** – NoSQL database & ORM.
-- **JWT** – Authentication & authorization.
-- **Arcjet** – Rate limiting & security.
-- **Upstash (Redis)** – Automated workflows.
-- **Nodemailer** – Email notifications.
+### 🟢 Initial
+- DB schema design (MongoDB + Mongoose)
+- Auth system with JWT + RBAC
+- Basic user & plan APIs
+
+### 🔵 Current
+- Email automation via Upstash
+- Arcjet integration for bot protection
+- Clean API error handling and logging
+
+### 🟣 Future
+- Stripe integration (Webhooks + Checkout)
+- GraphQL support (Apollo server)
+- Unit tests (Jest + Supertest)
+- Docker-based deployment setup
 
 ---
 
-## 🤝 Contributing
+## 🧠 Learnings (Real Talk)
 
-We welcome contributions from the community to make this project even better! To get started, please follow these steps:
+This project was a crash course in:
+- Building scalable Node.js APIs fast and clean
+- Designing for real-world edge cases (failed payments, expiry tracking)
+- Writing code that others (or future you) can actually maintain
+- Balancing security, performance, and dev speed under hackathon pressure
 
-### 🛠 Fork the Repository
+---
 
-Click the "Fork" button at the top right corner of this page to create a copy of the repository in your GitHub account.
+## 🏁 Quick Start
 
-### 🖥 Clone Your Fork
+### ⚙️ Prerequisites
+
+- Node.js v18+
+- MongoDB Atlas (or local instance)
+- Redis (Upstash or local)
+- `.env` file with the following:
+
+```env
+JWT_SECRET=your_secret_key
+MONGODB_URI=your_connection_string
+SMTP_HOST=smtp.mailtrap.io
+SMTP_PORT=2525
+SMTP_USER=your_user
+SMTP_PASS=your_pass
+```
+
+### 🚀 Installation
 
 ```bash
 git clone https://github.com/GunaPalanivel/PayFlow.git
-```
-
-```bash
 cd PayFlow
+npm install
+npm run dev
 ```
 
-### 🌱 Create a New Branch
-
-```bash
-git checkout -b feature-branch
-```
-
-### ✍️ Make Your Changes
-
-Implement your changes or additions in the new branch.
-
-### 📌 Commit Your Changes
-
-```bash
-git commit -m "Add [feature/bug description]"
-```
-
-### 🚀 Push to Your Branch
-
-```bash
-git push origin feature-branch
-```
-
-### 🔀 Open a Pull Request
-
-Navigate to the original repository and open a pull request (PR) from your forked repository.
+The API starts on `http://localhost:3000`
 
 ---
 
-### Guidelines for Contributing
+## 💡 Features
 
-- **Write Clear Commit Messages**: Use clear and concise commit messages that accurately describe the changes made.
-- **Code Style**: Ensure your code follows the project's style guidelines and best practices.
-- **Documentation**: Update the documentation if your changes include new features or significant modifications.
-- **Tests**: If applicable, write tests for your changes to ensure functionality is maintained and new features work as expected.
+- [x] JWT Auth & Role Management
+- [x] Subscription Plans CRUD
+- [x] Automated Expiry Reminders
+- [x] Email Notifications
+- [x] Rate Limiting & Security Middleware
+- [ ] Stripe Checkout Integration (Upcoming)
+- [ ] GraphQL API Layer (Upcoming)
+- [ ] Dockerfile + Prod-ready setup (Upcoming)
+- [ ] Testing Coverage (Jest + CI pipeline)
 
-### Reviewing and Merging Pull Requests
+---
 
-All contributions will be reviewed by the project maintainers. Feedback and suggestions for improvements may be provided during the review process. Once your pull request has been reviewed and approved, it will be merged into the main branch.
+## 🧑‍💻 Contributing
 
-We appreciate your contributions and thank you for helping improve this project!
+We welcome contributions, big or small. Here’s how to get started:
 
-If you have any questions or need further assistance, feel free to reach out to us by opening an issue in the repository.
+```bash
+# 1. Fork the repo
+# 2. Clone your fork
+git clone https://github.com/YOUR_USERNAME/PayFlow.git
 
-Let's continue pushing boundaries and crafting exceptional web experiences together! 💻✨
+# 3. Create a new feature branch
+git checkout -b feature/something-cool
 
-## 🎯 Conclusion
+# 4. Make your changes and commit
+git commit -m "feat: added something cool"
 
-The **Pay Flow** simplifies subscription handling with a scalable, secure, and automated approach. With ongoing improvements like **Stripe payments and GraphQL**, this API is set to become a robust solution for businesses managing recurring revenue.
+# 5. Push and open a PR
+git push origin feature/something-cool
+```
+
+### ✅ PR Guidelines
+
+- Write clean, descriptive commit messages.
+- Stick to existing file structure and conventions.
+- Add tests if adding new features or logic.
+- Document your feature if it affects usage.
+
+---
+
+## 📅 Hackathon: FOSS Hack 2025
+
+We submitted this at [FOSS Hack 2025](https://fossunited.org/fosshack/2025) – India’s largest open-source hackathon with a ₹5L prize pool.
+
+Despite juggling internships and Bangalore traffic 🫠, we managed to ship this MVP. It’s not finished yet, but we’re proud of the architecture and vision behind it. Work is ongoing.
+
+📍 [Project Submission](https://fossunited.org/hack/fosshack25/p/21ks4ol456)  
+📍 [LinkedIn Post](https://www.linkedin.com/posts/guna-palanivel_...)
+
+---
+
+## 👤 Author
+
+**Guna Palanivel**  
+[LinkedIn](https://www.linkedin.com/in/guna-palanivel/)  
+Node.js dev from SRM University, passionate about clean backend systems and building real-world tools that solve actual problems.
+
+---
+
+## 📌 Final Thoughts
+
+Pay Flow isn't just a hackathon project. It’s a foundation for what a subscription backend should look like: secure, scalable, and built with real-world challenges in mind.
+
+If you're building a SaaS product, feel free to fork, clone, or contribute. Let’s build subscription infra that doesn’t suck.
+
+---
+
+Want this in your SaaS stack? Open a PR or drop an issue. We’re just getting started.
