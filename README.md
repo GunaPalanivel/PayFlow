@@ -6,6 +6,17 @@ A full-stack-ready backend built to handle real-world subscription workflows. Bu
 
 ---
 
+## 📅 Hackathon: FOSS Hack 2025
+
+We submitted this at [FOSS Hack 2025](https://fossunited.org/fosshack/2025) – India’s largest open-source hackathon with a ₹5L prize pool.
+
+Despite juggling internships and Bangalore traffic 🫠, we managed to ship this MVP. It’s not finished yet, but we’re proud of the architecture and vision behind it. Work is ongoing.
+
+📍 [Project Submission](https://fossunited.org/hack/fosshack25/p/21ks4ol456)  
+📍 [LinkedIn Post](https://www.linkedin.com/posts/guna-palanivel_%F0%9D%97%A3%F0%9D%97%AE%F0%9D%98%86-%F0%9D%97%99%F0%9D%97%B9%F0%9D%97%BC%F0%9D%98%84-%F0%9D%97%A0%F0%9D%98%86-%F0%9D%97%9D%F0%9D%97%BC%F0%9D%98%82%F0%9D%97%BF%F0%9D%97%BB%F0%9D%97%B2%F0%9D%98%86-activity-7303383872333877248-WuTT?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD1iPIIBQeYlEGyQlhSmzyVizNLkjpHgngw)
+
+---
+
 ## 📌 TL;DR
 
 If you're building a product with recurring billing, Pay Flow gives you:
@@ -180,25 +191,6 @@ git push origin feature/something-cool
 - Stick to existing file structure and conventions.
 - Add tests if adding new features or logic.
 - Document your feature if it affects usage.
-
----
-
-## 📅 Hackathon: FOSS Hack 2025
-
-We submitted this at [FOSS Hack 2025](https://fossunited.org/fosshack/2025) – India’s largest open-source hackathon with a ₹5L prize pool.
-
-Despite juggling internships and Bangalore traffic 🫠, we managed to ship this MVP. It’s not finished yet, but we’re proud of the architecture and vision behind it. Work is ongoing.
-
-📍 [Project Submission](https://fossunited.org/hack/fosshack25/p/21ks4ol456)  
-📍 [LinkedIn Post]([https://www.linkedin.com/posts/guna-palanivel_...](https://www.linkedin.com/posts/guna-palanivel_%F0%9D%97%A3%F0%9D%97%AE%F0%9D%98%86-%F0%9D%97%99%F0%9D%97%B9%F0%9D%97%BC%F0%9D%98%84-%F0%9D%97%A0%F0%9D%98%86-%F0%9D%97%9D%F0%9D%97%BC%F0%9D%98%82%F0%9D%97%BF%F0%9D%97%BB%F0%9D%97%B2%F0%9D%98%86-activity-7303383872333877248-WuTT?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD1iPIIBQeYlEGyQlhSmzyVizNLkjpHgngw))
-
----
-
-## 👤 Author
-
-**Guna Palanivel**  
-[LinkedIn](https://www.linkedin.com/in/guna-palanivel/)  
-Node.js dev from SRM University, passionate about clean backend systems and building real-world tools that solve actual problems.
 
 ---
 
